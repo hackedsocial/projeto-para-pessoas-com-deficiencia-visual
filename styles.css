@@ -11,6 +11,7 @@
 body {
     font-size: 1rem;
     font-family: 'Montserrat';
+    transition: font-size 0.3s ease;
 }
 
 header {
@@ -71,7 +72,7 @@ section {
     margin-top: 3rem;
     margin-bottom: 3rem;
     background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
+                url('img/flor-esquerda.png') bottom left no-repeat;
     background-size: 180px 180px;
 }
 
@@ -145,41 +146,53 @@ h2 {
     margin-bottom: 5px;
 }
 
-.apresenta-lista {
-    display: none;
+.apresenta-lista[style*="display: flex"] {
+    display: flex !important;
 }
 
 .alto-contraste {
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+    background-color: var(--alto-contraste-fundo) !important;
+    color: var(--alto-contraste-texto) !important;
 }
 
 .alto-contraste header,
 .alto-contraste footer,
 .alto-contraste .formulario {
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+    background-color: var(--alto-contraste-fundo) !important;
+    color: var(--alto-contraste-texto) !important;
 }
 
 .alto-contraste .nav-link {
-    color: var(--alto-contraste-link);
+    color: var(--alto-contraste-link) !important;
 }
 
 .alto-contraste .botao-inicio,
 .alto-contraste .formulario button,
 .alto-contraste .btn-primary {
-    background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo);
+    background-color: var(--alto-contraste-link) !important;
+    color: var(--alto-contraste-fundo) !important;
 }
 
 .alto-contraste #tropicalia {
-    background: none;
+    background: none !important;
 }
 
 .alto-contraste #galeria {
-    background-color: var(--alto-contraste-fundo);
+    background-color: var(--alto-contraste-fundo) !important;
 }
 
 .alto-contraste .fundo-galeria {
-    background: none;
+    background: none !important;
+}
+
+.alto-contraste input,
+.alto-contraste textarea {
+    background-color: var(--alto-contraste-fundo) !important;
+    color: var(--alto-contraste-texto) !important;
+    border-color: var(--alto-contraste-texto) !important;
+}
+
+.menu-acessibilidade button:focus {
+    outline: 2px solid var(--vermelho);
+    outline-offset: 2px;
 }
